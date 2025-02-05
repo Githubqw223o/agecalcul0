@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Age Calculator</h1>
+    <div class="calculator">
+      <div class="input-group">
+        <label for="birthdate">Enter your birthdate:</label>
+        <input type="date" id="birthdate">
+      </div>
+      <button id="calculate">Calculate Age</button>
+      <div class="result" id="result">
+        <div class="age-box">
+          <span class="number" id="years">-</span>
+          <span class="label">Years</span>
+        </div>
+        <div class="age-box">
+          <span class="number" id="months">-</span>
+          <span class="label">Months</span>
+        </div>
+        <div class="age-box">
+          <span class="number" id="days">-</span>
+          <span class="label">Days</span>
+        </div>
+      </div>
+      <div class="countdown">
+        <h2>Time Until Next Birthday</h2>
+        <div class="countdown-display">
+          <div class="countdown-box">
+            <span class="countdown-number" id="countdown-days">-</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-number" id="countdown-hours">-</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-number" id="countdown-minutes">-</span>
+            <span class="countdown-label">Minutes</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-number" id="countdown-seconds">-</span>
+            <span class="countdown-label">Seconds</span>
+          </div>
+        </div>
+        <p class="next-birthday">
+          Next birthday: <span id="next-birthday-date">-</span>
+        </p>
+      </div>
+      <div class="footer">
+        Made by <span>Noor MS</span>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+
+  <script>
+    // Set the max attribute for the input date to today's date
+    document.getElementById('birthdate').setAttribute('max', new Date().toISOString().split('T')[0]);
+  </script>
+</body>
+</html>
